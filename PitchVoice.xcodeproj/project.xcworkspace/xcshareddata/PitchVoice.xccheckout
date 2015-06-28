@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>81E20BDB-2EC1-4746-A5BF-2C473CF2D5C4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PitchVoice</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>47D29C94681E3EF3E1D5988622CD8FBF38916D71</key>
+		<string>https://github.com/NSMohamedElalfy/PitchVoice.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PitchVoice.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>47D29C94681E3EF3E1D5988622CD8FBF38916D71</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/NSMohamedElalfy/PitchVoice.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>47D29C94681E3EF3E1D5988622CD8FBF38916D71</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>47D29C94681E3EF3E1D5988622CD8FBF38916D71</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PitchVoice</string>
+		</dict>
+	</array>
+</dict>
+</plist>
