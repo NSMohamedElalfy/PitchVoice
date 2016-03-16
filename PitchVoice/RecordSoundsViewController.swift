@@ -25,19 +25,40 @@ class RecordSoundsViewController: UIViewController {
         self.recordingInProgress.hidden = false
         self.stopButton.hidden = false
         
-        let dirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
-        var currentDateTime = NSDate()
-        var formatter = NSDateFormatter()
+        
+        /*
+        // Recording settings
+        NSMutableDictionary *settings = [NSMutableDictionary dictionary];
+        
+        [settings setValue: [NSNumber numberWithInt:kAudioFormatLinearPCM] forKey:AVFormatIDKey];
+        [settings setValue: [NSNumber numberWithFloat:8000.0] forKey:AVSampleRateKey];
+        [settings setValue: [NSNumber numberWithInt: 1] forKey:AVNumberOfChannelsKey];
+        [settings setValue: [NSNumber numberWithInt:16] forKey:AVLinearPCMBitDepthKey];
+        [settings setValue: [NSNumber numberWithBool:NO] forKey:AVLinearPCMIsBigEndianKey];
+        [settings setValue: [NSNumber numberWithBool:NO] forKey:AVLinearPCMIsFloatKey];
+        [settings setValue:  [NSNumber numberWithInt: AVAudioQualityMax] forKey:AVEncoderAudioQualityKey];
+*/
+        
+        //let dirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0]
+        let dirPath = NSTemporaryDirectory()
+        let currentDateTime = NSDate()
+        let formatter = NSDateFormatter()
         formatter.dateFormat = "ddMMyyyy-HHmmss"
-        var recordingName = formatter.stringFromDate(currentDateTime) + ".wav"
-        var pathArray = [dirPath,recordingName]
+        let recordingName = "\(formatter.stringFromDate(currentDateTime)).wav"
+        let pathArray = [dirPath,recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        println(filePath!)
+        print(filePath!)
+        let session = AVAudioSession.sharedInstance()
+        do{
+            try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try session.setActive(true)
+            try audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
+        }catch{
+            
+        }
         
-        var session = AVAudioSession.sharedInstance()
-        session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
         
-        audioRecorder = AVAudioRecorder(URL: filePath, settings: nil, error: nil)
+
         audioRecorder.delegate = self
         audioRecorder.meteringEnabled =  true
         audioRecorder.prepareToRecord()
@@ -49,8 +70,13 @@ class RecordSoundsViewController: UIViewController {
     @IBAction func stopRecording(sender: UIButton) {
         self.recordingInProgress.hidden = true
         self.audioRecorder.stop()
-        var session = AVAudioSession.sharedInstance()
-        session.setActive(false, error: nil)
+        let session = AVAudioSession.sharedInstance()
+        do{
+            try session.setActive(false)
+        }catch{
+            
+        }
+
         
     }
     
@@ -83,7 +109,7 @@ class RecordSoundsViewController: UIViewController {
 }
 
 extension RecordSoundsViewController: AVAudioRecorderDelegate {
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
             self.recordedAudio = RecordedAudio()
             self.recordedAudio.recordingFilePath = recorder.url
@@ -91,7 +117,7 @@ extension RecordSoundsViewController: AVAudioRecorderDelegate {
             
             self.performSegueWithIdentifier(segueID, sender: recordedAudio)
         }else{
-            println("Recording Audio was not Successfully")
+            print("Recording Audio was not Successfully")
             self.recordButton.enabled = true
             self.stopButton.hidden = true
         }

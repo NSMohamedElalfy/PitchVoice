@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="x3B-C7-heJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="x3B-C7-heJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record Sounds View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="PitchVoice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -27,7 +28,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDi-Pn-wcb">
-                                <rect key="frame" x="253" y="389" width="94" height="21"/>
+                                <rect key="frame" x="254" y="389" width="92" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.10196078431372549" green="0.2196078431372549" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -67,7 +68,7 @@
         <!--Play Sounds View Controller-->
         <scene sceneID="7HY-4N-LBq">
             <objects>
-                <viewController id="gGz-t8-XU9" customClass="PlaySoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gGz-t8-XU9" customClass="PlaySoundsViewController" customModule="PitchVoice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7zj-ER-0Bg"/>
                         <viewControllerLayoutGuide type="bottom" id="NFv-ZQ-fSv"/>
@@ -77,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCb-mv-N5h">
-                                <rect key="frame" x="275" y="500" width="50" height="50"/>
+                                <rect key="frame" x="275" y="425" width="50" height="50"/>
                                 <state key="normal" image="stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -86,7 +87,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtI-lD-qMO">
-                                <rect key="frame" x="50" y="120" width="100" height="100"/>
+                                <rect key="frame" x="54" y="120" width="100" height="100"/>
                                 <state key="normal" image="slow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -95,7 +96,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeL-2L-sDk">
-                                <rect key="frame" x="450" y="120" width="100" height="100"/>
+                                <rect key="frame" x="446" y="120" width="100" height="100"/>
                                 <state key="normal" image="fast">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -104,7 +105,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvD-gD-Y1E">
-                                <rect key="frame" x="50" y="283" width="100" height="100"/>
+                                <rect key="frame" x="54" y="283" width="100" height="100"/>
                                 <state key="normal" image="chipmunk">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -113,7 +114,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFZ-gY-gOt">
-                                <rect key="frame" x="450" y="283" width="100" height="100"/>
+                                <rect key="frame" x="446" y="283" width="100" height="100"/>
                                 <state key="normal" image="darthvader">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -121,17 +122,26 @@
                                     <action selector="playDarthvaderAudio:" destination="gGz-t8-XU9" eventType="touchUpInside" id="uPF-Zg-7dR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjy-ce-sZk">
+                                <rect key="frame" x="283" y="520" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveOutput:" destination="gGz-t8-XU9" eventType="touchUpInside" id="0Rh-2Y-Bpp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MvD-gD-Y1E" firstAttribute="leading" secondItem="VJK-mN-UDF" secondAttribute="leadingMargin" constant="34" id="3KG-fK-Qoi"/>
                             <constraint firstAttribute="centerX" secondItem="wCb-mv-N5h" secondAttribute="centerX" id="Ax4-dE-MEb"/>
+                            <constraint firstItem="bjy-ce-sZk" firstAttribute="centerX" secondItem="wCb-mv-N5h" secondAttribute="centerX" id="Bjq-lG-bv8"/>
                             <constraint firstItem="eFZ-gY-gOt" firstAttribute="top" secondItem="UeL-2L-sDk" secondAttribute="bottom" constant="63" id="GtT-Gh-Gj3"/>
                             <constraint firstItem="MvD-gD-Y1E" firstAttribute="top" secondItem="FtI-lD-qMO" secondAttribute="bottom" constant="63" id="HCB-6E-G2m"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eFZ-gY-gOt" secondAttribute="trailing" constant="34" id="QxX-ws-2Y2"/>
                             <constraint firstItem="UeL-2L-sDk" firstAttribute="top" secondItem="7zj-ER-0Bg" secondAttribute="bottom" constant="56" id="VbS-Zc-G85"/>
                             <constraint firstItem="FtI-lD-qMO" firstAttribute="leading" secondItem="VJK-mN-UDF" secondAttribute="leadingMargin" constant="34" id="a06-hX-5ja"/>
-                            <constraint firstItem="NFv-ZQ-fSv" firstAttribute="top" secondItem="wCb-mv-N5h" secondAttribute="bottom" constant="50" id="lSq-tm-ay6"/>
+                            <constraint firstItem="bjy-ce-sZk" firstAttribute="top" secondItem="wCb-mv-N5h" secondAttribute="bottom" constant="45" id="cLF-OO-zZu"/>
+                            <constraint firstItem="NFv-ZQ-fSv" firstAttribute="top" secondItem="wCb-mv-N5h" secondAttribute="bottom" constant="125" id="lSq-tm-ay6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UeL-2L-sDk" secondAttribute="trailing" constant="34" id="sVf-sw-TVD"/>
                             <constraint firstItem="FtI-lD-qMO" firstAttribute="top" secondItem="7zj-ER-0Bg" secondAttribute="bottom" constant="56" id="wE4-NM-qdM"/>
                         </constraints>

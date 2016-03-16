@@ -29,11 +29,20 @@ class PlaySoundsViewController: UIViewController {
         }else{
         println("the filePath is empty")
         }*/
+        do{
+            try self.audioPlayer = AVAudioPlayer(contentsOfURL: recordedAudio.recordingFilePath)
+            self.audioPlayer.enableRate = true
+            self.audioEngine = AVAudioEngine()
+            try self.audioFile = AVAudioFile(forReading: recordedAudio.recordingFilePath)
+        }catch{
+            
+        }
         
-        self.audioPlayer = AVAudioPlayer(contentsOfURL: recordedAudio.recordingFilePath, error: nil)
-        self.audioPlayer.enableRate = true
-        self.audioEngine = AVAudioEngine()
-        self.audioFile = AVAudioFile(forReading: recordedAudio.recordingFilePath, error: nil)
+    }
+    
+    
+    @IBAction func saveOutput(sender:UIButton) {
+        
     }
     
     
@@ -69,20 +78,47 @@ class PlaySoundsViewController: UIViewController {
         audioEngine.stop()
         audioEngine.reset()
         
-        var audioPlayerNode = AVAudioPlayerNode()
+        let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
         
-        var changePitchEffect = AVAudioUnitTimePitch()
+        let changePitchEffect = AVAudioUnitTimePitch()
         changePitchEffect.pitch = pitch
+        //changePitchEffect.rate = 0.5
         audioEngine.attachNode(changePitchEffect)
         
-        audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: nil)
-        audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
+        audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: audioFile.processingFormat)
+        audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: audioFile.processingFormat)
         
         audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
-        audioEngine.startAndReturnError(nil)
         
-        audioPlayerNode.play()
+        
+        do{
+            
+            try audioEngine.start()
+            audioPlayerNode.play()
+            
+            let dirPath = NSTemporaryDirectory()
+            let currentDateTime = NSDate()
+            let formatter = NSDateFormatter()
+            formatter.dateFormat = "ddMMyyyy-HHmmss"
+            let recordingName = "\(formatter.stringFromDate(currentDateTime)).wav"
+            let pathArray = [dirPath,recordingName]
+            let filePath = NSURL.fileURLWithPathComponents(pathArray)
+            print(filePath!)
+            let audioFile = try! AVAudioFile(forWriting: filePath!, settings: audioEngine.mainMixerNode.outputFormatForBus(0).settings)
+            audioEngine.inputNode!.installTapOnBus(0, bufferSize: 4096, format: audioEngine.inputNode!.outputFormatForBus(0), block: { (buffer:AVAudioPCMBuffer, when:AVAudioTime) -> Void in
+                do{
+                    try audioFile.writeFromBuffer(buffer)
+                }catch{
+                    print("error")
+                }
+            })
+            
+            
+        }catch{
+            
+        }
+        
     }
     
 

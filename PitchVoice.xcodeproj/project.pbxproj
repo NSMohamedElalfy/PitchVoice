@@ -10,7 +10,6 @@
 		B1BD3C1B1AE8607500034425 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BD3C1A1AE8607500034425 /* AppDelegate.swift */; };
 		B1BD3C221AE8607500034425 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1BD3C211AE8607500034425 /* Images.xcassets */; };
 		B1BD3C251AE8607500034425 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1BD3C231AE8607500034425 /* LaunchScreen.xib */; };
-		B1BD3C311AE8607500034425 /* PitchVoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BD3C301AE8607500034425 /* PitchVoiceTests.swift */; };
 		B1BD3C3D1AE8608C00034425 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BD3C3A1AE8608C00034425 /* PlaySoundsViewController.swift */; };
 		B1BD3C3E1AE8608C00034425 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BD3C3B1AE8608C00034425 /* RecordedAudio.swift */; };
 		B1BD3C3F1AE8608C00034425 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BD3C3C1AE8608C00034425 /* RecordSoundsViewController.swift */; };
@@ -18,23 +17,12 @@
 		B1BD3C431AE860B000034425 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BD3C421AE860B000034425 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B1BD3C2B1AE8607500034425 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1BD3C0D1AE8607500034425 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1BD3C141AE8607500034425;
-			remoteInfo = PitchVoice;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		B1BD3C151AE8607500034425 /* PitchVoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchVoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BD3C191AE8607500034425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1BD3C1A1AE8607500034425 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1BD3C211AE8607500034425 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B1BD3C241AE8607500034425 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		B1BD3C2A1AE8607500034425 /* PitchVoiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchVoiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BD3C2F1AE8607500034425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1BD3C301AE8607500034425 /* PitchVoiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchVoiceTests.swift; sourceTree = "<group>"; };
 		B1BD3C3A1AE8608C00034425 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
@@ -46,13 +34,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		B1BD3C121AE8607500034425 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1BD3C271AE8607500034425 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -75,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				B1BD3C151AE8607500034425 /* PitchVoice.app */,
-				B1BD3C2A1AE8607500034425 /* PitchVoiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,39 +121,18 @@
 			productReference = B1BD3C151AE8607500034425 /* PitchVoice.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B1BD3C291AE8607500034425 /* PitchVoiceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B1BD3C371AE8607500034425 /* Build configuration list for PBXNativeTarget "PitchVoiceTests" */;
-			buildPhases = (
-				B1BD3C261AE8607500034425 /* Sources */,
-				B1BD3C271AE8607500034425 /* Frameworks */,
-				B1BD3C281AE8607500034425 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B1BD3C2C1AE8607500034425 /* PBXTargetDependency */,
-			);
-			name = PitchVoiceTests;
-			productName = PitchVoiceTests;
-			productReference = B1BD3C2A1AE8607500034425 /* PitchVoiceTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B1BD3C0D1AE8607500034425 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Mohamed El-Alfy";
 				TargetAttributes = {
 					B1BD3C141AE8607500034425 = {
 						CreatedOnToolsVersion = 6.3;
-					};
-					B1BD3C291AE8607500034425 = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = B1BD3C141AE8607500034425;
 					};
 				};
 			};
@@ -191,7 +150,6 @@
 			projectRoot = "";
 			targets = (
 				B1BD3C141AE8607500034425 /* PitchVoice */,
-				B1BD3C291AE8607500034425 /* PitchVoiceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,13 +163,6 @@
 				B1BD3C411AE860A000034425 /* movie_quote.mp3 in Resources */,
 				B1BD3C221AE8607500034425 /* Images.xcassets in Resources */,
 				B1BD3C431AE860B000034425 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1BD3C281AE8607500034425 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,23 +180,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1BD3C261AE8607500034425 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B1BD3C311AE8607500034425 /* PitchVoiceTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B1BD3C2C1AE8607500034425 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1BD3C141AE8607500034425 /* PitchVoice */;
-			targetProxy = B1BD3C2B1AE8607500034425 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B1BD3C231AE8607500034425 /* LaunchScreen.xib */ = {
@@ -280,6 +215,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -349,6 +285,7 @@
 				INFOPLIST_FILE = PitchVoice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mo7amedelalfy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -360,41 +297,8 @@
 				INFOPLIST_FILE = PitchVoice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mo7amedelalfy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		B1BD3C381AE8607500034425 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PitchVoiceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PitchVoice.app/PitchVoice";
-			};
-			name = Debug;
-		};
-		B1BD3C391AE8607500034425 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PitchVoiceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PitchVoice.app/PitchVoice";
 			};
 			name = Release;
 		};
@@ -415,15 +319,6 @@
 			buildConfigurations = (
 				B1BD3C351AE8607500034425 /* Debug */,
 				B1BD3C361AE8607500034425 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B1BD3C371AE8607500034425 /* Build configuration list for PBXNativeTarget "PitchVoiceTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B1BD3C381AE8607500034425 /* Debug */,
-				B1BD3C391AE8607500034425 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
